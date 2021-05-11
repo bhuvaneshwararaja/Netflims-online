@@ -31,7 +31,7 @@ export const Rowcard = ({ actionmovie,trending,favlist}) => {
               <button className="disp" value={actionmovie.id} onClick={(e) => {
                 e.preventDefault()
               // sessionStorage.getItem("sessionuser")
-              fetch("http://localhost:8080/user/watchlist",{
+              fetch("/user/watchlist",{
         method: 'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({user:{id:sessionStorage.getItem("sessionuser"),movie:e.target.value}})
@@ -46,7 +46,7 @@ export const Rowcard = ({ actionmovie,trending,favlist}) => {
               <button className="disp"  value={actionmovie.id} onClick={(e) => {
                 e.preventDefault()
               // sessionStorage.getItem("sessionuser")
-              fetch("http://localhost:8080/user/fav",{
+              fetch("/user/fav",{
         method: 'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({user:{id:sessionStorage.getItem("sessionuser"),movie:e.target.value}})
