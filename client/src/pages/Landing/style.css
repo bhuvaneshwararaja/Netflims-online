@@ -1,0 +1,107 @@
+.landing-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+.landing-nav img{
+    width:70px;
+}
+.lsign-btn{
+    padding: .5rem 2rem;
+    border: 2px solid crimson;
+    background: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.lsign-btn:hover{
+    background:crimson;
+    color: #fff;
+}
+.landing-main-wrapper{
+    display: flex;
+    align-items: center;
+    
+    min-height: 90vh;
+    padding:0rem 3rem;
+}
+.netflims-det{
+    line-height:5rem
+}
+.netfilms-det h1{
+    font-size: 3rem;
+}
+.netfilms-det p{
+    font-size: 1.2rem;
+    line-height: 3rem;
+    margin-top: 0;
+}
+.landing-img-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.landing-img-wrapper img{
+    width:70%;
+}
+.login-signup{
+    width:70%;
+    display: flex;
+    justify-content: center;
+    min-height: 50vh;
+}
+.lform form{
+    width: 35rem;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 3rem;
+    transition:all .5s linear;
+    padding: 2rem 0rem;
+    
+}
+.lform form .inp-flex input{
+    width: 15rem;
+    padding: .5rem;
+    font-size: 1rem;
+    transition:all .5s linear;
+}
+
+.sign-btn{
+    padding: .5rem 2rem;
+    border: 2px solid crimson;
+    background: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.inp-flex{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-size: 1.4rem;
+}
+.lform form:hover{
+    box-shadow: rgb(14 30 37 / 12%) 0px 2px 4px 0px, rgb(14 30 37 / 32%) 0px 2px 16px 0px;
+}
+.lform form:hover > .inp-flex  > input{
+    border:1px solid crimson;
+}
+.lform form:hover > .inp-flex  > input:focus{
+    border:2px solid crimson;
+}
+.active{
+    background:crimson;
+    color:white;
+    pointer-events: none;
+}
+.error{
+    color: crimson;
+    font-size: .7rem;
+    width: 15rem;
+    line-height: 2
+}

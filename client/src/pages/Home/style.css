@@ -1,0 +1,178 @@
+.banner{
+    width: 100%;
+    height: auto;
+    background:#141414;
+}
+.top{
+    width: inherit;
+    height: 70vh;
+}
+.banner-img{
+    width:inherit;
+    height:inherit;
+    object-fit: cover;
+}
+.append-banner{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    background: linear-gradient(to bottom,rgba(0,0,0,.6),#141414);
+}
+.det{
+    padding: 1rem;
+    width:50%;
+}
+.banner-head{
+    color:#fff;
+    font-size: 3.5rem;
+    margin: 0;
+}
+.banner-para{
+    color: #fff;
+    font-size: 1.3rem;
+}
+.banner-btns button{
+    padding: .5rem 3rem;
+    font-size: 1rem;
+    color: #fff;
+    background: crimson;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transform: scale(1);
+    transition:all .2s linear;
+
+}
+.banner-btns button:hover{
+    transform: scale(1.1)
+}
+.flex-cln{
+    display:flex;
+    flex-direction: column;
+}
+
+.flex-row{
+    display: flex;
+    width: 100%;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+.flex-row::-webkit-scrollbar {
+    display: none;
+}
+
+.pdlm0-1{
+    margin: 0rem;
+    padding-left: 1rem;
+}
+.heading{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.head-sec{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.slide-btns button{
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background: crimson;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* .banner{
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+}
+.append-banner{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to bottom,rgba(0,0,0,.6),#141414);
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.det{
+    padding: 1rem;
+    color: white;
+    width: 35rem;
+    margin-bottom: 10rem;
+}
+.banner-head{
+    font-size: 3.5rem;
+    font-family: var(--headingfamily);
+    margin: 0;
+}
+.banner-para{
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+.banner-btns{
+    margin-top: 1rem;
+}
+.banner-btns button{
+    padding: .5rem 3rem;
+    font-size: 1rem;
+    color: #fff;
+    background: crimson;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transform: scale(1);
+    transition:all .2s linear;
+}
+.banner-btns button:hover{
+    transform: scale(1.1)
+}
+.top{
+    position: relative;
+    top: 35rem;
+    
+}
+.flex-cln{
+    display:flex;
+    flex-direction: column;
+  
+    background: #141414;
+}
+.banner img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+.flex-row{
+    display: flex;
+    width: 100%;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    scroll-behavior: smooth;
+
+}
+.flex-row::-webkit-scrollbar {
+    display: none;
+}
+.pdlm0-1{
+    margin: 0rem;
+    padding-left: 1rem;
+}
+.heading{
+    font-size: 1.5rem;
+    color: #fff;
+} */

@@ -1,0 +1,146 @@
+.row{
+    width: 20rem;
+    height: 12rem;
+    margin: 1rem .5rem;
+    transition:all .5s linear;
+    position: relative;
+}
+.top-0{
+    position: relative;
+    font-size: .6rem;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0,0,0,.6);
+}
+.top-0 h1,
+.top-0 p,
+.top-0 h3{
+    color:white;
+    pointer-events:none;
+}
+.top-0 p{
+    font-size: .8rem;
+}
+.top-0:hover > .pd-1 >.disp{
+    display:block;
+}
+.top-0:hover > .pd-1 > .btns >.disp{
+    display:block;
+}
+.row-trend{
+    width: 22rem;
+    height: 28rem;
+    margin: 1rem .5rem;
+    transition:all .5s linear;
+    transform: scale(.9);
+    margin: 0;
+}
+.row-trend:hover{
+    transform: scale(1);
+}
+.row-trend img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+.row img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+.append{
+    position: relative;
+    font-size: .6rem;
+    top: -12.3rem;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0,0,0,.6);
+    
+}
+.append-trend{
+    position: relative;
+    font-size: .6rem;
+    top: -28.3rem;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0,0,0,.6);
+    
+}
+.append-trend h1,
+.append-trend p,
+.append-trend h3{
+    color:white;
+    pointer-events:none;
+}
+.append-trend p{
+    font-size: 1rem;
+}
+.down{
+    top: 7rem;
+    position: relative;
+}
+.append:hover{
+    display:flex;
+    justify-content:center;
+    background: rgba(0,0,0,.8);
+    
+}
+.row:hover{
+    transform: scale(1.2);
+    width:22rem;
+}
+.append:hover > .pd-1 >.disp{
+    display:block;
+}
+.append:hover > .pd-1 > .btns >.disp{
+    display:block;
+}
+
+.append h1,
+.append p,
+.append h3{
+    color:white;
+    pointer-events:none;
+}
+.append p{
+    font-size: .8rem;
+}
+.pd-1{
+    padding:1rem;
+}
+.disp{
+    display:none;
+}
+.row:first-child:hover{
+    margin-left: 1rem;
+}
+.btns{
+    display:flex;
+}
+.btns button{
+    border: none;
+    outline:none;
+    padding:.2rem auto;
+    background:crimson;
+    color:white;
+    cursor: pointer;
+    transition:all .5s linear;
+}
+.btns button:not(:first-child){
+    margin-left: .3rem;
+}
+.btns button:focus{
+    background:green;
+}
