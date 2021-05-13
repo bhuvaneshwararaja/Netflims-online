@@ -18,7 +18,7 @@ export const Favourites = () => {
     .then((res) => {
         res.fav.forEach((found,index) => {
             fetch(
-                `https://api.themoviedb.org/3/movie/${found}?api_key=e93c9fd6b6add9a5402788dd99c744a3`
+                `https://api.themoviedb.org/3/movie/${found}?api_key=`
               )
                 .then((res) => {
                   return res.json();
