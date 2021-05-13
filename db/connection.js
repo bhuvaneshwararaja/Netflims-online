@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const URI = "mongodb+srv://Netfilms:bhuvanesh007@netfilms.7efmj.mongodb.net/user?-retryWrites=true&w=majority"
+const URI = "your db url"
 const connectDB = () => {
     mongoose.connect(URI,{
         useUnifiedTopology:true,
