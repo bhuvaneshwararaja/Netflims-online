@@ -3,48 +3,80 @@
     justify-content: space-between;
     align-items: center;
     padding: .5rem;
+    position: fixed;
+    z-index: 999;
+    width: 97%;
 }
 .landing-nav img{
     width:70px;
 }
-.lsign-btn{
+.lsign-btn,.lsign-btn--333{
     padding: .5rem 2rem;
     border: 2px solid crimson;
     background: transparent;
     font-size: 1rem;
     cursor: pointer;
-    transition:all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition:all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    border-radius: 30px;
+}
+.lsign-btn{
+   
+    color:#fff;
+}
+.lsign-btn--333{
+
+    color:#333;
 }
 .lsign-btn:hover{
     background:crimson;
     color: #fff;
 }
-.landing-main-wrapper{
-    display: flex;
+.lsign-btn--333:hover{
+    background:crimson;
+    color: #fff;
+}
+.animated-scene {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    min-height: 400px;
+    animation: infiniteScrollBg 50s linear infinite;
+ }
+
+ .animated-scene__frame {
+     width: 100%;
+     height: 100%;
+     background-size: cover;
+     background-color: #4277a3;
+     
+}
+.bg--black--over{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)),
+    linear-gradient(0deg, black, transparent);
+    position:absolute;
+    top: 0;
+    display:flex;
+    justify-content: center;
     align-items: center;
+}
+@keyframes infiniteScrollBg {
+    0% {
+      transform: translateY(0%);
+    }
+    100%{
+      transform: translateY(-100%);
+    }
+  }
+.landing-main-wrapper{
+    width: 100%;
     
     min-height: 90vh;
-    padding:0rem 3rem;
 }
-.netflims-det{
-    line-height:5rem
-}
-.netfilms-det h1{
-    font-size: 3rem;
-}
-.netfilms-det p{
-    font-size: 1.2rem;
-    line-height: 3rem;
-    margin-top: 0;
-}
-.landing-img-wrapper{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-.landing-img-wrapper img{
-    width:70%;
-}
+
+
+
 .login-signup{
     width:70%;
     display: flex;
@@ -52,7 +84,7 @@
     min-height: 50vh;
 }
 .lform form{
-    width: 35rem;
+    width: 30rem;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
@@ -61,6 +93,8 @@
     line-height: 3rem;
     transition:all .5s linear;
     padding: 2rem 0rem;
+    background: #fff;
+    border-radius: 50px;
     
 }
 .lform form .inp-flex input{
@@ -68,12 +102,13 @@
     padding: .5rem;
     font-size: 1rem;
     transition:all .5s linear;
+    border:1px solid #333;
+    border-radius: 10px;
 }
 
 .sign-btn{
     padding: .5rem 2rem;
     border: 2px solid crimson;
-    background: transparent;
     font-size: 1rem;
     cursor: pointer;
     transition:all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -83,17 +118,10 @@
     flex-direction: column;
 }
 label{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
-.lform form:hover{
-    box-shadow: rgb(14 30 37 / 12%) 0px 2px 4px 0px, rgb(14 30 37 / 32%) 0px 2px 16px 0px;
-}
-.lform form:hover > .inp-flex  > input{
-    border:1px solid crimson;
-}
-.lform form:hover > .inp-flex  > input:focus{
-    border:2px solid crimson;
-}
+
+
 .active{
     background:crimson;
     color:white;

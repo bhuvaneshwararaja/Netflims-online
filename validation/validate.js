@@ -17,7 +17,7 @@ const checkusername = (user) => {
 const checkpassword = (password) => {
    const strongpass =  new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})")
    if(strongpass.test(password) != true){
-       return "password must contain 1 Capital letter 1 Special character and must be greater than 8 character ";
+       return "password must contain 1 Capital letter 1 Special character and > 8 ";
    }
    else{
     return true

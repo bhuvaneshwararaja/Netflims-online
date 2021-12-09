@@ -1,6 +1,7 @@
 import "./style.css";
 import {useEffect, useState} from "react"
 import {useHistory} from "react-router-dom"
+import { AiFillPlayCircle} from "react-icons/ai";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 export const Tiles = ({actionmovie}) => {
@@ -24,10 +25,10 @@ export const Tiles = ({actionmovie}) => {
             )}+". . .`}</p>
             <h3 className="disp"> action . {actionmovie.original_language}</h3>
             <div className=" btns">
-              <button className="disp " value={actionmovie.id} onClick={(e) => {
+              <AiFillPlayCircle className="play" value={actionmovie.id} onClick={(e) => {
                   history.push(`/movies/${actionmovie.id}`)
                   window.location.reload();
-              }}>play</button>
+              }}/>
               <button className="disp " value={actionmovie.id} onClick={(e) => {
                 e.preventDefault()
               // sessionStorage.getItem("sessionuser")

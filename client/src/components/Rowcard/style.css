@@ -75,7 +75,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: rgba(0,0,0,.6);
+    background: rgba(0,0,0,.8);
     
 }
 .append-trend h1,
@@ -98,15 +98,16 @@
     
 }
 .row:hover{
-    transform: scale(1.2);
+    transform:scaleY(1.2);
     width:22rem;
 }
-.append:hover > .pd-1 >.disp{
+.append:hover > .pd-1 >.disp,.append:hover > .pd-1 >.play{
     display:block;
 }
-.append:hover > .pd-1 > .btns >.disp{
+.append:hover > .pd-1 > .btns >.disp,.append:hover > .pd-1 > .btns >.play{
     display:block;
 }
+
 
 .append h1,
 .append p,
@@ -128,19 +129,53 @@
 }
 .btns{
     display:flex;
+    align-items: center;
+}
+.trend{
+    padding:.5rem .8rem;
+
+}
+.btns button{
+    padding:.3rem .8rem;
+
 }
 .btns button{
     border: none;
     outline:none;
-    padding:.2rem auto;
     background:crimson;
     color:white;
     cursor: pointer;
     transition:all .5s linear;
+    border-radius: 10px;
 }
+
 .btns button:not(:first-child){
-    margin-left: .3rem;
+    margin-left: .8rem;
 }
 .btns button:focus{
     background:green;
+}
+
+.play,.t-play{
+    background:crimson;
+    font-size: 1.8rem;
+    border-radius: 100%;
+    cursor: pointer;
+    color:#fff;
+
+}
+.play{
+    display:none;
+}
+.trend-number{
+    color:#fff;
+    font-size: 1.7rem;
+    position: absolute;
+    top:-12rem;
+    background:crimson;
+    width:2.5rem;
+    height:2.5rem;
+    border-radius:100%;
+    display: flex;
+    justify-content: center;
 }

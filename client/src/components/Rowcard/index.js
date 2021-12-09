@@ -3,7 +3,8 @@ import {useHistory} from "react-router-dom"
 import {useState,useEffect} from "react"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-export const Rowcard = ({ actionmovie,trending,favlist}) => {
+import { AiFillPlayCircle} from "react-icons/ai";
+export const Rowcard = ({ actionmovie,trending,favlist,val}) => {
   const history = useHistory()
   return (
     <>
@@ -24,10 +25,10 @@ export const Rowcard = ({ actionmovie,trending,favlist}) => {
             )}+". . .`}</p>
             <h3 className="disp"> action . {actionmovie.original_language}</h3>
             <div className=" btns">
-              <button className="disp"  value={actionmovie.id} onClick={(e) => {
+              <AiFillPlayCircle className="play"  value={actionmovie.id} onClick={(e) => {
                   history.push(`/movies/${actionmovie.id}`)
                   window.location.reload();
-              }}>play</button>
+              }} />
               <button className="disp" value={actionmovie.id} onClick={(e) => {
                 e.preventDefault()
               // sessionStorage.getItem("sessionuser")
@@ -70,17 +71,19 @@ export const Rowcard = ({ actionmovie,trending,favlist}) => {
         ></img>
         <div className="append-trend">
           <div className="down pd-1">
-            <h1>{actionmovie.name}</h1>
+            <div className="trend-number">{val+1}</div>
+            <h1>{actionmovie.title}</h1>
             <p className="">{`${actionmovie.overview.slice(
               0,
               80
             )}+". . .`}</p>
             <h3 className=""> action . {actionmovie.original_language}</h3>
             <div className=" btns">
-              <button className=" " value={actionmovie.id} onClick={() => {
-                history.push(`/movies/${actionmovie.id}`)
-              }}>play</button>
-              <button className=" " value={actionmovie.id} onClick={(e) => {
+            <AiFillPlayCircle className="t-play"  value={actionmovie.id} onClick={(e) => {
+                  history.push(`/movies/${actionmovie.id}`)
+                  window.location.reload();
+              }} />
+              <button className="trend" value={actionmovie.id} onClick={(e) => {
                 e.preventDefault()
               // sessionStorage.getItem("sessionuser")
               fetch("/user/watchlist",{
@@ -95,7 +98,7 @@ export const Rowcard = ({ actionmovie,trending,favlist}) => {
         })
     .catch(error => console.error(error))
               }}>watchlist</button>
-              <button className="" value={actionmovie.id} onClick={(e) => {
+              <button className="trend" value={actionmovie.id} onClick={(e) => {
                 e.preventDefault()
               // sessionStorage.getItem("sessionuser")
               fetch("/user/fav",{

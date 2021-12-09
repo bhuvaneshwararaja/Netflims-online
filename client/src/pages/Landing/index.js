@@ -120,33 +120,12 @@ export const Landing = () => {
         </div>
       </div>
       <div className="landing-main-wrapper">
-        <div className="netfilms-det">
-          <h1>
-            Welcome To <span style={{ color: "crimson" }}>NetFilms</span>
-          </h1>
-          <p>
-            We NetFlims give you a{" "}
-            <span style={{ color: "crimson" }}>unlimited access</span> to watch
-            movies online with{" "}
-            <span style={{ color: "crimson" }}> Free Subscriptions</span>. Watch
-            Your Favorite Movies without any Interuption.
-          </p>
-          <button
-            type="button"
-            className="lsign-btn"
-            onClick={(e) => {
-              e.preventDefault();
-              setContainer(true);
-            }}
-          >
-            Getstarted
-          </button>
-        </div>
-        {container === false ? (
-          <div className="landing-img-wrapper">
-            <img src="/landing.png" alt="" />
-          </div>
-        ) : (
+      <div class="animated-scene">
+    <div class="animated-scene__frame animated-scene__frame-1" style={{background:`url("./bg-poster.jpg")`}}></div>
+    <div class="animated-scene__frame animated-scene__frame-2"style={{background:`url("./bg-poster.jpg")`}}></div>
+    </div>
+    <div className="bg--black--over">
+            
           <div className="login-signup">
             {loginSwitch === true ? (
               <div className="lform">
@@ -179,7 +158,7 @@ export const Landing = () => {
                     <input type="password" name="password" onChange={HandleInputLoginChange}></input>
                   </div>
                   <div>
-                    <button className="lsign-btn" style={{ marginTop: "1rem" }} onClick={HandleLoginSubmit}>
+                    <button className="lsign-btn--333" style={{ marginTop: "1rem" }} onClick={HandleLoginSubmit}>
                       LogIn
                     </button>
                   </div>
@@ -229,7 +208,7 @@ export const Landing = () => {
                   </div>
 
                   <div>
-                    <button className="lsign-btn" style={{ marginTop: "1rem" }} onClick={HandleOnSubmit}>
+                    <button className="lsign-btn--333" style={{ marginTop: "1rem" }} onClick={HandleOnSubmit}>
                       Register
                     </button>
                   </div>
@@ -237,7 +216,32 @@ export const Landing = () => {
               </div>
             )}
           </div>
-        )}
+      
+    </div>
+        {/* <div className="netfilms-det">
+          <h1>
+            Welcome To <span style={{ color: "crimson" }}>NetFilms</span>
+          </h1>
+          <p>
+            We NetFlims give you a{" "}
+            <span style={{ color: "crimson" }}>unlimited access</span> to watch
+            movies online with{" "}
+            <span style={{ color: "crimson" }}> Free Subscriptions</span>. Watch
+            Your Favorite Movies without any Interuption.
+          </p>
+          <button
+            type="button"
+            className="lsign-btn"
+            onClick={(e) => {
+              e.preventDefault();
+              setContainer(true);
+            }}
+          >
+            Getstarted
+          </button>
+        </div> */}
+        
+       
       </div>
     </>
   );

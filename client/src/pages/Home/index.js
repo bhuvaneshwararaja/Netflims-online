@@ -118,7 +118,7 @@ export const Home = () => {
     });
     trending = trendmov.slice(0, 10).map((action, index) => {
       return (
-        <Rowcard key={index} actionmovie={action} trending={true}></Rowcard>
+        <Rowcard key={index} val={index} actionmovie={action} trending={true}></Rowcard>
       );
     });
     mysterymovies = mystmov.map((action, index) => {

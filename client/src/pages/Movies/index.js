@@ -15,28 +15,30 @@ export const Movie = () => {
   const { id } = useParams();
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=`
+      `https://api.themoviedb.org/3/movie/${id}?api_key=e93c9fd6b6add9a5402788dd99c744a3`
     )
       .then((res) => {
         return res.json();
       })
       .then((data) => setMovies(data));
     fetch(
-      `https://api.themoviedb.org/3/movie/${id}/videos?api_key=`
+      `https://api.themoviedb.org/3/movie/${id}/videos?api_key=e93c9fd6b6add9a5402788dd99c744a3`
     )
       .then((res) => {
         return res.json();
       })
       .then((data) => setVideo(data));
     fetch(
-      `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=e93c9fd6b6add9a5402788dd99c744a3&language=en-US&page=1`
     )
       .then((res) => {
         return res.json();
       })
       .then((data) => setRecom(data.results));
   }, [id]);
-
+if(movie !== undefined){
+  console.log(movie);
+}
 
   return (
     <>
