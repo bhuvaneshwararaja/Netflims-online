@@ -1,16 +1,24 @@
-import { useState } from "react"
+import { useState,useContext } from "react"
 import { Navbar } from "../../components/Navbar"
-import { Rowcard } from "../../components/Rowcard"
 import { Tiles } from "../../components/tiles"
+import {AuthContext} from "../../context/Authcontext"
+import {useHistory} from "react-router-dom"
+
 import "./style.css"
 export const SearchPage = () => {
     const [searchResult,setSearchResult] = useState()
+    const history = useHistory()
+  const [islogged,setislogged] = useContext(AuthContext)
+
+
     if(searchResult !== undefined) {
         var result = searchResult.map((resultantMovie,index) => {
             return <Tiles key={index} actionmovie={resultantMovie}></Tiles>
         })
     }
 return<>
+{islogged.status === true || sessionStorage.getItem("status") === "true" ?
+<>
     <Navbar/>
     <div className="search--container">
         <div className="search--inp">
@@ -30,6 +38,8 @@ return<>
                    </div>}
         </div>
     </div>
+    </>
+    :history.push("/")}
 </>
 }
 
