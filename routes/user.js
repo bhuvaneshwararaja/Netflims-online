@@ -3,6 +3,7 @@ const router = express.Router()
 const mongoose = require('mongoose')
 const connectDB = require("../db/connection")
 const {User,userSchema} = require('../models/user')
+var sessionstorage = require('sessionstorage');
 const md5 = require('md5')
 const {
     checkpass,
@@ -87,6 +88,24 @@ router.post("/watchlist",(req,res) => {
     })
  
 })
+
+router.delete("/:type/delete/:movieid/:userid",(req,res) => {
+    console.log(req.url)
+    if(req.params.type === "watchlist"){
+        User.update({_id:req.params.userid},{$pull:{watchlist:req.params.movieid}},(err) => {
+            if(!err) res.send({status:true})
+            else console.log(err)
+        })
+    }
+    else{
+        User.update({_id:req.params.userid},{$pull:{fav:req.params.movieid}},(err) => {
+            if(!err) res.send({status:true})
+            else console.log(err)
+        })
+    }
+
+})
+
 router.post("/favlist",(req,res) => {
     User.findOne({_id:req.body.user.id},(err,found) => {
         if(!err){

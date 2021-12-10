@@ -37,7 +37,7 @@ export const Watchlist = () => {
     }
     
      const watchlist = getUniqueListBy(movie,"original_title").sort().map((movies,index) =>{
-            return <Tiles key={index} actionmovie={movies}></Tiles>
+            return <Tiles key={index} actionmovie={movies} remove={true} type={"watchlist"}></Tiles>
        })
        
     return <>

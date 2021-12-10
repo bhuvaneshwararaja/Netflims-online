@@ -1,10 +1,10 @@
 import "./style.css";
 import {useEffect, useState} from "react"
 import {useHistory} from "react-router-dom"
-import { AiFillPlayCircle} from "react-icons/ai";
+import { AiFillPlayCircle,AiFillCloseCircle} from "react-icons/ai";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-export const Tiles = ({actionmovie}) => {
+export const Tiles = ({actionmovie,remove,type}) => {
     const history = useHistory()
    
     return <>
@@ -17,6 +17,19 @@ export const Tiles = ({actionmovie}) => {
           height="inherit"
         ></LazyLoadImage>
         <div className="append">
+          {remove === true ?
+          <AiFillCloseCircle className="del" onClick={(e) => {
+            e.preventDefault()
+            fetch(`/user/${type}/delete/${actionmovie.id}/${sessionStorage.getItem("sessionuser")}`,{ 
+              method: 'DELETE'
+            })
+            .then(res =>{return res.json()})
+            .then((res) => {
+              if(res.status === true) {window.location.reload()}
+            })
+          }}/>
+            :""
+        }
           <div className="pd-1">
             <h1>{actionmovie.title}</h1>
             <p className="disp">{`${actionmovie.overview.slice(

@@ -12,6 +12,7 @@ app.use("/",require("./routes"))
 if(process.env.NODE_ENV === "production"){
     app.use(express.static("client/build"));
 }
-app.listen(process.env.PORT || port,(req,res) => [
-    console.log("server start at port 8080")
-])
+// app.listen(process.env.PORT || port,(req,res) => [
+//     console.log("server start at port 8080")
+// ])
+module.exports = app;

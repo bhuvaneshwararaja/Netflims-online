@@ -2,7 +2,7 @@
     width: 20rem;
     height: 12rem;
     margin: 1rem .5rem;
-    transition:all .5s linear;
+    transition:all .2s linear;
     position: relative;
 }
 .top-0{
@@ -35,9 +35,11 @@
     width: 22rem;
     height: 28rem;
     margin: 1rem .5rem;
-    transition:all .5s linear;
+    transition:all .2s linear;
     transform: scale(.9);
     margin: 0;
+    border-radius: 10px;
+
 }
 .row-trend:hover{
     transform: scale(1);
@@ -63,6 +65,7 @@
     align-items: center;
     flex-direction: column;
     background: rgba(0,0,0,.6);
+    
     
 }
 .append-trend{
@@ -178,4 +181,13 @@
     border-radius:100%;
     display: flex;
     justify-content: center;
+}
+
+.del{
+    color:#fff;
+    position: absolute;
+    top: 0rem;
+    right:0;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
