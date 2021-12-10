@@ -6,6 +6,7 @@ import {Landing} from "./pages/Landing"
 import {Favourites} from "./pages/favourites"
 import {Generes} from "./pages/Generes"
 import {Watchlist} from "./pages/favourites/watchlist"
+import {SearchPage} from "./pages/search/index"
 import { Route, Switch } from 'react-router';
 import Auth from './context/Authcontext';
 
@@ -19,6 +20,8 @@ function App() {
       <Route path="/favourites" exact><Favourites /></Route>
       <Route path="/watchlist" exact><Watchlist /></Route>
       <Route path="/generes" exact><Generes /></Route>
+      <Route path="/search" exact><SearchPage /></Route>
+
     </Switch>
     </Auth>
     

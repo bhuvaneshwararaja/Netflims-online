@@ -1,0 +1,43 @@
+.search--container{
+width:100%;
+min-height:100vh;
+position: absolute;
+background:#141414;
+display: flex;
+flex-direction: column;
+}
+.search--inp{
+    position: relative;
+    top: 5rem;
+    text-align: center;
+    height:12rem;
+}
+.search--inp input{
+    width: 50%;
+    margin-top: 2rem;
+    padding: 1rem .8rem;
+    border-radius: 10px;
+    background-color: #0f0e0e;
+    border:none;
+    outline: none;
+    color:#fff;
+    font-size: 1rem;
+}
+.search--result--container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 50vh;
+}
+.search--result--container p{
+    color: #fff;
+    text-align: center;
+}
+.search--flex--wrapper{
+    display:flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-wrap:wrap;
+    justify-content:center;
+}

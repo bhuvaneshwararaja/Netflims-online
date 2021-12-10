@@ -22,6 +22,10 @@ export const Navbar = () => {
                 <li className="nav-link">
                     <Link to="/favourites" style={location.pathname === "/favourites" ? ({"color":"crimson"}):({"color":"white"})}>Favourites</Link>
                 </li>
+                <li className="nav-link">
+                    <Link to="/search" style={location.pathname === "/search" ? ({"color":"crimson"}):({"color":"white"})}>Search</Link>
+                </li>
+    
             </ul>
            
                 <ul className="nav-btns">
