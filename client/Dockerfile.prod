@@ -13,10 +13,10 @@ RUN npm run build
 
 
 
-#stage pro
+#stage prod
 FROM nginx:1.12-alpine
 
-COPY --from=build-stage /app/buil/ /usr/share/nginx/html
+COPY --from=build-stage /app/build/ /usr/share/nginx/html
 
 EXPOSE 80
 
